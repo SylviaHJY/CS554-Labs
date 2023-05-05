@@ -71,20 +71,20 @@ const AttractionsList = () =>{
       setSearchTerm(value);
     };
 
-    const changedPage = async(totalPages, page) => {
-      try {
-        if (page > 0 && page <= totalPages) {
+    const changedPage = async (totalPages, page) => {
+      if (isNaN(page) || page < 1 || page > totalPages) {
+        setNotFound(true);
+        console.log("Page does not exist");
+      } else {
+        try {
           setNotFound(false);
           navigate(`/attractions/page/${page}`);
-        } else {
+        } catch (e) {
+          console.log(e);
           setNotFound(true);
-          console.log("Page does not exist");
         }
-      } catch (e) {
-        console.log(e);
-        setNotFound(true);
       }
-    };
+    };    
 
     const buildCard = (attractions)  => {
       const imageSrc = attractions.images ? attractions.images[0].url : noImage;
@@ -122,8 +122,8 @@ const AttractionsList = () =>{
                   fontWeight: 'bold'
                 }}
                 gutterBottom
-                variant='h6'
-                component='h3'
+                variant='h2'
+                component='h2'
               >
                 {attractions.name}
               </Typography>

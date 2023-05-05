@@ -9,6 +9,7 @@ import EventsList from './components/EventsList';
 import AttractionsList from './components/AttractionsList';
 import VenuesList from './components/VenuesList';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import NotFound from './components/NotFound'; 
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path='/events/:id' element={<Events />} />
             <Route path='/attractions/:id' element={<Attractions />} />
             <Route path='/venues/:id' element={<Venues />} />
+           <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>

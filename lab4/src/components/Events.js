@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 import '../App.css';
 
-const event = (props) => {
+const Event = (props) => {
   const [showData, setShowData] = useState(undefined);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
@@ -207,4 +207,4 @@ const event = (props) => {
   }
 }
 
-export default event;
+export default Event;

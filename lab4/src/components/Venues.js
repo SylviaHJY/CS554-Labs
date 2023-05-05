@@ -13,7 +13,7 @@ import {
 import '../App.css';
 
 
-const venue = (props) => {
+const Venue = (props) => {
   const [showData, setShowData] = useState(undefined);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
@@ -189,4 +189,4 @@ const venue = (props) => {
   }
 };
 
-export default venue;
+export default Venue;

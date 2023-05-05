@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 import '../App.css';
 
-const attraction = (props) => {
+const Attraction = (props) => {
   const [showData, setShowData] = useState(undefined);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
@@ -193,4 +193,4 @@ const attraction = (props) => {
   }
 };
 
-export default attraction;
+export default Attraction;

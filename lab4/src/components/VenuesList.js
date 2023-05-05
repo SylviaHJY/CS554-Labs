@@ -72,21 +72,21 @@ const VenuesList = () => {
   const searchValue = async (value) => {
     setSearchTerm(value);
   };
-
+  
   const changedPage = async (totalPages, page) => {
-    try {
-      if (page > 0 && page <= totalPages) {
+    if (isNaN(page) || page < 1 || page > totalPages) {
+      setNotFound(true);
+      console.log("Page does not exist");
+    } else {
+      try {
         setNotFound(false);
         navigate(`/venues/page/${page}`);
-      } else {
+      } catch (e) {
+        console.log(e);
         setNotFound(true);
-        console.log("Page does not exist");
       }
-    } catch (e) {
-      console.log(e);
-      setNotFound(true);
     }
-  };
+  };    
 
   const buildCard = (venues)  => {
     const imageSrc = venues.images ? venues.images[0].url : noImage;
