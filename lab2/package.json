@@ -1,0 +1,19 @@
+{
+  "name": "cs-554-lab-2",
+  "version": "1.0.0",
+  "description": "My lab 2 module-Redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Jiaiyin Huang 10477088",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.13.0",
+    "redis": "^4.6.4"
+  }
+}
